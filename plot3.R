@@ -15,10 +15,10 @@ rm(energy_usage)
 with(energy_usage_sub, plot(strptime(paste(Date,Time),"%d/%m/%Y %H:%M:%S"), Sub_metering_1, type="n", ylab="Energy sub metering", xlab=""))
 
 with(energy_usage_sub, lines(strptime(paste(Date,Time),"%d/%m/%Y %H:%M:%S"), Sub_metering_1, type="l",  col="black")) 
-with(energy_usage_sub, lines(strptime(paste(Date,Time),"%d/%m/%Y %H:%M:%S"), Sub_metering_2, type="l",  col="blue")) 
-with(energy_usage_sub, lines(strptime(paste(Date,Time),"%d/%m/%Y %H:%M:%S"), Sub_metering_3, type="l",  col="red")) 
+with(energy_usage_sub, lines(strptime(paste(Date,Time),"%d/%m/%Y %H:%M:%S"), Sub_metering_2, type="l",  col="red")) 
+with(energy_usage_sub, lines(strptime(paste(Date,Time),"%d/%m/%Y %H:%M:%S"), Sub_metering_3, type="l",  col="blue")) 
 
-legend("topright",pch="-",col=c("black","blue","red"),legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
+legend("topright",pch="-",col=c("black","red","blue"),legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
 
-dev.copy(png,"plot3.png",width=480,height=480, bg="transparent")
+dev.copy(png,"plot3.png",width=720,height=720, bg="transparent")
 dev.off()
